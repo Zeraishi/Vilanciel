@@ -1,158 +1,168 @@
-<style>
-
-    * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #212121; /* Darker blue background */
-    transition: all 0.5s ease-in-out;
-}
-
-.background-image {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.background-image img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0px 0px 50px rgba(0,0,0,0.7);
-    transform: skewY(-10deg); /* Add a slight skew for a more edgy look */
-}
-
-header {
-    background-color: #3498db; /* Deep blue header color */
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background-color: #fff;
-    animation: animate-bottom 2s linear infinite;
-}
-
-@keyframes animate-bottom {
-    0% {
-        transform: translateY(50px);
-    }
-    100% {
-        transform: translateY(-10px) rotate(90deg);
-    }
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-header nav ul li {
-    margin-right: 20px;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
-}
-
-.main section {
-    background-color: #333; /* Dark gray background */
-    margin-bottom: 20px;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.main section h2 {
-    margin-top: 0;
-    color: #999; /* Light gray text */
-}
-
-footer {
-    background-color: #3498db; /* Deep blue footer color */
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    clear: both;
-}
-    
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Website</title>
+    <title>Beautiful Profile</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="background-image"> <!-- Add your .png background image here -->
-    <img src="Vilanciel-background-hd.png" alt="Your background image" style="width: 100%; height: 100vh; object-fit: cover;">
-
-
-<header>
+<header class="header-container">
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">My Skills</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#contact">Get in Touch</a></li>
         </ul>
     </nav>
 </header>
 
 <main class="main">
-    <section id="home">
-        <h1>Welcome to our website!</h1>
-        <p>This is a sample text.</p>
+    <section id="about" class="hero-section">
+        <h1>Welcome to my profile!</h1>
+        <p>I'm a full-stack developer with a passion for building innovative solutions.</p>
+        <button>Learn More</button>
     </section>
-    <section id="about">
-        <h2>About us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    <section id="skills" class="skill-section">
+        <h2 My Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-item">
+                <i class="fa fa-html5"></i>
+                <p>HTML/CSS</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa fa-react"></i>
+                <p>React</p>
+            </div>
+        </div>
     </section>
-    <section id="contact">
-        <h3>Get in touch</h3>
-        <p>Contact information: <a href="mailto:info@example.com">info@example.com</a></p>
+    <section id="projects" class="project-section">
+        <h2 My Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="project1.jpg" alt="Project 1">
+                <p>Project 1: A full-stack e-commerce website built with React and Node.js.</p>
+            </div>
+            <div class="project-item">
+                <img src="project2.jpg" alt="Project 2">
+                <p>Project 2: A mobile app built with React Native.</p>
+            </div>
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3">
+                <p>Project 3: A web application built with Angular and Spring Boot.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2 Get in Touch</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Send Message</button>
+        </form>
     </section>
 </main>
 
-<footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+<footer class="footer">
+    &copy; 2023 Your Name
 </footer>
+
+<div class="preloader">
+    <img src="Vilanciel-background-hd.png" alt="Loading...">
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+<style>
+   body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Vilanciel-background-hd.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    margin-top: -40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    background-image: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 1em;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 1em;
+}
+
+.skill-item {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 1em;
+}
+
+.project-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-section {
+    background-color: #444;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
