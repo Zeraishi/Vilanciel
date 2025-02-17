@@ -1,12 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Add your own background color */
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -15,31 +32,20 @@ header {
     padding: 1em;
     text-align: center;
 }
-    .background-image {
-  background-image: url('Vilanciel-background-hd.png');
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Set the height to 100% of the viewport */
-  width: 100vw; /* Set the width to 100% of the viewport */
-  position: relative; /* Add this to make the image a container */
-}/* styles.css */
 
-    
-nav ul {
+header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    text-align: center;
     justify-content: space-between;
 }
 
-nav li {
+header nav ul li {
     margin-right: 20px;
-    text-align: center;
 }
 
-nav a {
+header nav a {
     color: #fff;
     text-decoration: none;
 }
@@ -51,26 +57,17 @@ main {
     padding: 2em;
 }
 
-section {
-    background-color: #f7f7f7;
-    padding: 1em;
+.main section {
+    background-color: #f9f9f9; /* Add your own background color */
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #333;
+.main section h2 {
     margin-top: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    margin-bottom: 10px;
+    color: #333;
 }
 
 footer {
@@ -80,63 +77,49 @@ footer {
     text-align: center;
     clear: both;
 }
-  </style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VILANCIEL HOME</title>
+    <title>Responsive Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-        <div class="background-image">
-    #img src="/Vilanciel-background.png" alt="Background Image">
 <body>
-    <header>
-        <h1>VILANCIEL</h1>
-        <p>By Zeraishi</p>
-    </header>
 
+<div class="background-image"> <!-- Add your .png background image here -->
+    <img src="Vilanciel-background-hd.png" alt="Your background image" style="width: 100%; height: 100vh; object-fit: cover;">
+</div>
+
+<header>
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-  
-        <div class="background-image">
-    <img src="/.png" alt="Background Image">
-  
-  
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello, I'm Zeraishi.</p>
-        </section>
-        <section id="experience">
-            <h2></h2>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2></h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2></h2>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
-      </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Vilanciel. All rights reserved.</p>
-    </footer>
+</header>
+
+<main class="main">
+    <section id="home">
+        <h1>Welcome to our website!</h1>
+        <p>This is a sample text.</p>
+    </section>
+    <section id="about">
+        <h2>About us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    </section>
+    <section id="contact">
+        <h3>Get in touch</h3>
+        <p>Contact information: <a href="mailto:info@example.com">info@example.com</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
