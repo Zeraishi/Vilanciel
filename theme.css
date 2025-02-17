@@ -1,1 +1,78 @@
+:root {
+    --primary-color: #ADD8E6;
+    --secondary-color: #333;
+    --accent-color: #45A0E6;
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: Arial, sans-serif;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    background-color: #333; /* changed to dark grey */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.center-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.home-section,
+.center-section,
+.about-section {
+    margin: 0 20px;
+}
+
+.link-text {
+    color: #45A0E6;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* added to align button with top */
+    background-color: #333; /* changed to dark grey */
+    color: #fff; /* changed text color of button */
+}
+
+.back-to-top:hover {
+    background-color: #2F4F7F; /* changed hover effect */
+}
