@@ -1,4 +1,6 @@
-* {
+<style>
+
+    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,7 +10,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9; /* Add your own background color */
+    background-color: #212121; /* Darker blue background */
+    transition: all 0.5s ease-in-out;
 }
 
 .background-image {
@@ -18,19 +21,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .background-image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    box-shadow: inset 0px 0px 50px rgba(0,0,0,0.7);
+    transform: skewY(-10deg); /* Add a slight skew for a more edgy look */
 }
 
 header {
-    background-color: #333;
+    background-color: #3498db; /* Deep blue header color */
     color: #fff;
     padding: 1em;
     text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #fff;
+    animation: animate-bottom 2s linear infinite;
+}
+
+@keyframes animate-bottom {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(-10px) rotate(90deg);
+    }
 }
 
 header nav ul {
@@ -58,25 +89,27 @@ main {
 }
 
 .main section {
-    background-color: #f9f9f9; /* Add your own background color */
+    background-color: #333; /* Dark gray background */
     margin-bottom: 20px;
     padding: 1em;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .main section h2 {
     margin-top: 0;
-    color: #333;
+    color: #999; /* Light gray text */
 }
 
 footer {
-    background-color: #333;
+    background-color: #3498db; /* Deep blue footer color */
     color: #fff;
     padding: 1em;
     text-align: center;
     clear: both;
 }
+    
+</style>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +123,7 @@ footer {
 
 <div class="background-image"> <!-- Add your .png background image here -->
     <img src="Vilanciel-background-hd.png" alt="Your background image" style="width: 100%; height: 100vh; object-fit: cover;">
-</div>
+
 
 <header>
     <nav>
@@ -120,6 +153,6 @@ footer {
 <footer>
     <p>&copy; 2024 Your Name. All rights reserved.</p>
 </footer>
-
+</div>
 </body>
 </html>
