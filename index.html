@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="theme.css">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,122 +10,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Vilanciel</div>
-        <ul class="navigation">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#vilanciel" class="active">Vilanciel</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
+    <header class="header-container">
+        <h1 class="header-title">Vilanciel</h1>
+    </header>
+
+    <nav class="navigation-container">
+        <div class="center-nav">
+            <div class="home-section">
+                <a href="#home"><span class="link-text">Home</span></a>
+            </div>
+            <div class="center-section">
+                <a href="#vilanciel"><span class="link-text">Vilanciel</span></a>
+            </div>
+            <div class="about-section">
+                <a href="#about"><span class="link-text">About</span></a>
+            </div>
+        </div>
     </nav>
 
-    <section id="home">
-        <h1>Welcome to Vilanciel</h1>
-        <!-- placeholder for the homepage introduction -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    <section id="home" class="section-container">
+        <h1 class="section-title">Welcome to Vilanciel</h1>
+        <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
     </section>
 
-    <a href="#top" class="back-to-top">Back to top</a>
+    <a href="#top" class="back-to-top"><span class="link-text">Back to top</span></a>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-///////////////
-
-
-<style>
- :root {
-    --primary-color: #45A0E6;
-    --secondary-color: #808080;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #F7F7F7;
-    font-family: Arial, sans-serif;
-    color: #333;
-    transition: background-color 0.3s ease;
-}
-
-.navbar {
-    background-color: #808080;
-    border-bottom: 1px solid #999;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    color: white;
-    font-size: 24px;
-    letter-spacing: 2px;
-}
-
-.navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navigation li {
-    margin-right: 20px;
-}
-
-.navigation a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navbar:hover {
-    background-color: #333;
-}
-
-.home-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-
-.home-introduction {
-    text-align: center;
-}
-
-#vilanciel {
-    background-image: url('https://picsum.photos/2000/1000');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-}
-
-#about {
-    background-color: #F7F7F7;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.back-to-top {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: #45A0E6;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-</style>
