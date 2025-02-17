@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
   <style>
-    /* styles.css */
+    .background-image {
+  background-image: url('your-background-image.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Set the height to 100% of the viewport */
+  width: 100vw; /* Set the width to 100% of the viewport */
+  position: relative; /* Add this to make the image a container */
+}/* styles.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -79,6 +86,9 @@ footer {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="background-image">
+    <img src="your-background-image.png" alt="Background Image">
+  </div>
     <header>
         <h1>VILANCIEL</h1>
         <p>By Zeraishi</p>
