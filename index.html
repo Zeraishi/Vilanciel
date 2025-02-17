@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="theme.css">
-    
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vilanciel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Vilanciel Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header-container">
-        <h1 class="header-title">Vilanciel</h1>
+    <!-- Header Section -->
+    <header style="background-color: #ADD8E6;">
+        <div class="header-content">
+            <h1> VILANCIEL </h1>
+            <p> Welcome to Vilanciel! </p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="navigation-container">
-        <div class="center-nav">
-            <div class="home-section">
-                <a href="#home"><span class="link-text">Home</span></a>
-            </div>
-            <div class="center-section">
-                <a href="#vilanciel"><span class="link-text">Vilanciel</span></a>
-            </div>
-            <div class="about-section">
-                <a href="#about"><span class="link-text">About</span></a>
-            </div>
-        </div>
-    </nav>
-
-    <section id="home" class="section-container">
-        <h1 class="section-title">Welcome to Vilanciel</h1>
-        <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to my Website</h1>
+        <p>epic shit.</p>
+        <button>Learn More</button>
     </section>
 
-    <a href="#top" class="back-to-top"><span class="link-text">Back to top</span></a>
+    <!-- About Section -->
+    <section id="about" class="features">
+        <h2>Placeholder</h2>
+        <ul>
+            <li><i class="fas fa-lock"></i> Something 1</li>
+            <li><i class="fas fa-lock-open"></i> Something 2</li>
+            <li><i class="fas fa-lock-heart"></i> Something 3</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="features">
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button Send</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Vilanciel. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+<style>
+    <link rel="stylesheet" href="theme.css">
+</style>
