@@ -1,13 +1,24 @@
-// Scroll effect
-const header = document.querySelector('header');
-const main = document.querySelector('main');
+const navbar = document.querySelector('.navbar');
+const homeLink = document.querySelector('.navigation a[href="#home"]');
+const vilancielLink = document.querySelector('.navigation a[href="#vilanciel"]');
+const aboutLink = document.querySelector('.navigation a[href="#about"]');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        main.style.marginTop = '40px';
-        header.style.backgroundColor = '#444';
-    } else {
-        main.style.marginTop = '';
-        header.style.backgroundColor = '#333';
-    }
+homeLink.addEventListener('click', () => {
+    navbar.classList.remove('active');
+});
+
+vilancielLink.addEventListener('click', () => {
+    navbar.classList.remove('active');
+});
+
+aboutLink.addEventListener('click', () => {
+    navbar.classList.remove('active');
+});
+
+navbar.addEventListener('mouseover', () => {
+    navbar.classList.add('hover');
+});
+
+navbar.addEventListener('mouseout', () => {
+    navbar.classList.remove('hover');
 });
