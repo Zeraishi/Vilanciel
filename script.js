@@ -1,24 +1,9 @@
-const navbar = document.querySelector('.navbar');
-const homeLink = document.querySelector('.navigation a[href="#home"]');
-const vilancielLink = document.querySelector('.navigation a[href="#vilanciel"]');
-const aboutLink = document.querySelector('.navigation a[href="#about"]');
+const backToTopButton = document.querySelector('.back-to-top');
 
-homeLink.addEventListener('click', () => {
-    navbar.classList.remove('active');
-});
-
-vilancielLink.addEventListener('click', () => {
-    navbar.classList.remove('active');
-});
-
-aboutLink.addEventListener('click', () => {
-    navbar.classList.remove('active');
-});
-
-navbar.addEventListener('mouseover', () => {
-    navbar.classList.add('hover');
-});
-
-navbar.addEventListener('mouseout', () => {
-    navbar.classList.remove('hover');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        backToTopButton.classList.add('active');
+    } else {
+        backToTopButton.classList.remove('active');
+    }
 });
