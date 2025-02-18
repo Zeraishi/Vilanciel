@@ -1,16 +1,29 @@
-// Ensure the script is loaded
-console.log("scripts-character.js loaded successfully!");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("scripts-character.js loaded successfully!");
 
-// Function to open the character info modal with smooth transition
-function openCharacterInfo(characterId) {
-    const character = characters[characterId];
-    document.getElementById("characterName").innerText = character.name;
-    document.getElementById("characterImage").src = character.image;
-    document.getElementById("characterDescription").innerText = character.description;
+    // Select all character elements and add event listeners
+    document.querySelectorAll(".character").forEach(character => {
+        character.addEventListener("click", function () {
+            const characterId = this.getAttribute("data-character");
+            openCharacterInfo(characterId);
+        });
+    });
 
-// Make functions globally accessible
+    // Close modal when clicking the "X" button
+    document.querySelector(".close").addEventListener("click", closeCharacterInfo);
+
+    // Close modal when clicking outside of it
+    window.addEventListener("click", function (event) {
+        const modal = document.getElementById("characterInfoModal");
+        if (event.target === modal) {
+            closeCharacterInfo();
+        }
+    });
+});
+
+// Function to open character info modal
 window.openCharacterInfo = function(characterId) {
-    console.log("Character clicked:", characterId); // Debugging log
+    console.log("Character clicked:", characterId);
 
     // Get modal elements
     const modal = document.getElementById("characterInfoModal");
@@ -33,7 +46,7 @@ window.openCharacterInfo = function(characterId) {
         descriptionElement.textContent = characters[characterId].description;
     } else {
         console.warn("Character not found:", characterId);
-        return; // Exit if character ID is invalid
+        return;
     }
 
     // Show modal with fade-in effect
@@ -43,17 +56,9 @@ window.openCharacterInfo = function(characterId) {
     setTimeout(() => { modal.style.opacity = "1"; }, 10);
 };
 
-// Close modal function
+// Function to close character info modal
 window.closeCharacterInfo = function() {
     const modal = document.getElementById("characterInfoModal");
     modal.style.opacity = "0";
     setTimeout(() => { modal.style.display = "none"; }, 500);
 };
-
-// Close modal when clicking outside
-window.addEventListener("click", function(event) {
-    const modal = document.getElementById("characterInfoModal");
-    if (event.target === modal) {
-        closeCharacterInfo();
-    }
-});
