@@ -50,20 +50,6 @@ function closeCharacterInfo() {
     }, 300); // Match the duration of the transition
 }
 
-// Function to open the character info modal
-function openCharacterInfo(characterId) {
-    const character = characters[characterId];
-    document.getElementById("characterName").innerText = character.name;
-    document.getElementById("characterImage").src = character.image;
-    document.getElementById("characterDescription").innerText = character.description;
-    document.getElementById("characterInfoModal").style.display = "block";
-}
-
-// Function to close the modal
-function closeCharacterInfo() {
-    document.getElementById("characterInfoModal").style.display = "none";
-}
-
 // Close the modal if the user clicks outside of it
 window.onclick = function(event) {
     if (event.target == document.getElementById("characterInfoModal")) {
