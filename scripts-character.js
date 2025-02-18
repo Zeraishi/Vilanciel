@@ -17,7 +17,7 @@ const characters = {
     },
     character4: {
         name: "herthus",
-        image: "/images/herth.png",
+        image: "/images/herth-unhd.png",
         description: "I can't take it anymore. I'm sick of Herta. I try to play JY. My Herta deals more damage. I try to play Acheron. My Herta deals more damage. I try to play Feixiao. My Herta deals more damage. I want to play Argenti. His best team has Herta. I want to play smol Herta, Serval. They both want Herta. She grabs me by the throat. I do SU for her. I cook for her. I give her Eternal Calculus. She isn't satisfied. I pull An Instant Before A Gaze. "I don't need this much crit" She tells me. "Give me more DMG." She grabs Lingsha and forces her to throw herself off the enemies. "You just need to funnel me more. I can deal more damage with my BiS." I can't pull for her BiS, I don't have enough jades. She grabs my credit card. It declines. "Guess this is the end." She grabs her keyblade. She says "Endless riddles, nothing but a void." There is no hint of sadness in her eyes. Nothing but pure fiction damage. What a cruel world."
     }
 };
