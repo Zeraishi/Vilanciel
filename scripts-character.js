@@ -1,24 +1,24 @@
 // Data for each character (you can change these details)
 const characters = {
     character1: {
-        name: "Hero Name",
-        image: "character-placeholder1.jpg",
-        description: "The Hero is the main protagonist, brave and determined to save the world from the dark forces threatening it."
+        name: "Kelus",
+        image: "/images/caelus.png",
+        description: "The kelulus."
     },
     character2: {
-        name: "Villain Name",
-        image: "character-placeholder2.jpg",
-        description: "The Villain is the main antagonist, a mysterious and powerful being who seeks to destroy everything in their path."
+        name: "merch",
+        image: "/images/march.png",
+        description: "The merch."
     },
     character3: {
-        name: "Sidekick Name",
-        image: "character-placeholder3.jpg",
-        description: "The Sidekick is the loyal companion, offering wisdom, strength, and support throughout the Hero's journey."
+        name: "dong",
+        image: "/images/dong.png",
+        description: "The Dong."
     },
     character4: {
-        name: "Mentor Name",
-        image: "character-placeholder4.jpg",
-        description: "The Mentor is the wise and seasoned guide who helps the Hero discover their true potential."
+        name: "herthus",
+        image: "/images/herth.png",
+        description: "I can't take it anymore. I'm sick of Herta. I try to play JY. My Herta deals more damage. I try to play Acheron. My Herta deals more damage. I try to play Feixiao. My Herta deals more damage. I want to play Argenti. His best team has Herta. I want to play smol Herta, Serval. They both want Herta. She grabs me by the throat. I do SU for her. I cook for her. I give her Eternal Calculus. She isn't satisfied. I pull An Instant Before A Gaze. "I don't need this much crit" She tells me. "Give me more DMG." She grabs Lingsha and forces her to throw herself off the enemies. "You just need to funnel me more. I can deal more damage with my BiS." I can't pull for her BiS, I don't have enough jades. She grabs my credit card. It declines. "Guess this is the end." She grabs her keyblade. She says "Endless riddles, nothing but a void." There is no hint of sadness in her eyes. Nothing but pure fiction damage. What a cruel world."
     }
 };
 
