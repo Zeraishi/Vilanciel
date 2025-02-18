@@ -1,6 +1,13 @@
 // Ensure the script is loaded
 console.log("scripts-character.js loaded successfully!");
 
+// Function to open the character info modal with smooth transition
+function openCharacterInfo(characterId) {
+    const character = characters[characterId];
+    document.getElementById("characterName").innerText = character.name;
+    document.getElementById("characterImage").src = character.image;
+    document.getElementById("characterDescription").innerText = character.description;
+
 // Make functions globally accessible
 window.openCharacterInfo = function(characterId) {
     console.log("Character clicked:", characterId); // Debugging log
