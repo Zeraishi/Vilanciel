@@ -30,21 +30,21 @@
     <section class="characters" id="characters">
         <h2>Meet the Characters</h2>
         <div class="character-list">
-            <div class="character" data-character="character1">
+            <div class="character" onclick="openCharacterInfo('character1')">
                 <img src="/images/caelus.png" alt="Character 1" class="character-image">
-                <h3>Kelus</h3>
+                <h3>kelus</h3>
             </div>
-            <div class="character" data-character="character2">
+            <div class="character" onclick="openCharacterInfo('character2')">
                 <img src="/images/march.png" alt="Character 2" class="character-image">
-                <h3>Merch</h3>
+                <h3>merch</h3>
             </div>
-            <div class="character" data-character="character3">
+            <div class="character" onclick="openCharacterInfo('character3')">
                 <img src="/images/danheng.png" alt="Character 3" class="character-image">
-                <h3>Dong</h3>
+                <h3>dong</h3>
             </div>
-            <div class="character" data-character="character4">
+            <div class="character" onclick="openCharacterInfo('character4')">
                 <img src="/images/herth-unhd.png" alt="Character 4" class="character-image">
-                <h3>Herthus</h3>
+                <h3>herthus</h3>
             </div>
         </div>
     </section>
@@ -52,7 +52,7 @@
     <!-- Modal for Character Info -->
     <div id="characterInfoModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeCharacterInfo()">&times;</span>
             <h2 id="characterName"></h2>
             <img id="characterImage" src="" alt="Character Image">
             <p id="characterDescription"></p>
@@ -67,12 +67,12 @@
         </div>
     </footer>
 
-    <!-- Load JavaScript file -->
-    <script src="scripts-character.js" defer></script>
+<script src="/scripts-character.js"></script>
 
 </body>
 </html>
 
+                                                             <!-- Style bruhvs -->
 <style>
   /* Basic Reset */
 * {
