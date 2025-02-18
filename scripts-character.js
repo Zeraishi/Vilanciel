@@ -17,7 +17,7 @@ const characters = {
     },
     character4: {
         name: "Herthus",
-        image: "/images/herth.png",
+        image: "/images/herth-unhd.png",
         description: "The kurukuru."
     }
 };
