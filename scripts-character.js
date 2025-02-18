@@ -1,3 +1,6 @@
+
+console.log("scripts-character.js loaded successfully!");
+
 // Data for each character (you can change these details)
 const characters = {
     character1: {
@@ -22,6 +25,34 @@ const characters = {
     }
 };
 
+
+window.openCharacterInfo = function(characterId) {
+    console.log("Character clicked:", characterId); // Debugging log
+    const modal = document.getElementById("characterInfoModal");
+    const nameElement = document.getElementById("characterName");
+    const imageElement = document.getElementById("characterImage");
+    const descriptionElement = document.getElementById("characterDescription");
+
+    const characters = {
+        "character1": { name: "Kelus", image: "/images/caelus.png", description: "A brave adventurer." },
+        "character2": { name: "Merch", image: "/images/march.png", description: "A cheerful warrior." },
+        "character3": { name: "Dong", image: "/images/danheng.png", description: "A mysterious wanderer." },
+        "character4": { name: "Herthus", image: "/images/herth-unhd.png", description: "A divine being." }
+    };
+
+    if (characters[characterId]) {
+        nameElement.textContent = characters[characterId].name;
+        imageElement.src = characters[characterId].image;
+        descriptionElement.textContent = characters[characterId].description;
+    }
+
+    modal.style.display = "block";
+    modal.style.opacity = "0";
+    modal.style.transition = "opacity 0.5s ease-in-out";
+    setTimeout(() => { modal.style.opacity = "1"; }, 10);
+};
+
+
 // Function to open the character info modal
 function openCharacterInfo(characterId) {
     const character = characters[characterId];
@@ -42,3 +73,4 @@ window.onclick = function(event) {
         closeCharacterInfo();
     }
 };
+
